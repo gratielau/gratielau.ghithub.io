@@ -14,14 +14,14 @@
         <div><img src="pozaProfil.jpg" alt="poza" height="100" /></div>
         <div>
           <h1>Gratiela Uivari</h1>
-          <h2>Programator</h2>
+          <h2 id="job-title">Programator</h2>
         </div>
       </div>
       <ul id="top-menu-bar">
-        <li><a href="">HOME</a></li>
-        <li><a href="">Skills</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">Languages</a></li>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#" onclick="showSkills()">Skills</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Languages</a></li>
       </ul>
     </header>
     <section id="content">
@@ -41,9 +41,14 @@
         </section>
         <section>M2</section>
       </div>
-      <div id="main">main</div>
+      <div id="main">
+        <div class="page" id="home">Home content ...</div>
+        <div class="page" id="skills">Skills content....</div>
+        <div class="page" id="projects">Projects content...</div>
+        <div class="page" id="languages">Languages content...</div>
+      </div>
     </section>
     <footer><a href="">Linkedin</a></footer>
-    <script src="examples.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

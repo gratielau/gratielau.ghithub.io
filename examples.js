@@ -36,3 +36,10 @@ console.log(Ion.play("rubik"));
 console.info(playGame.call(Ion, "hide and seek")); // daca am mai multi parametrii ii pun unul dupa altul
 console.info(playGame.apply(Gratiela, ["hide and seek"])); // daca am mai multi parametrii ii pun in array
 console.warn(playGame("hide and seek"));
+
+document.getElementById("job-title").innerHTML = "Consultant <i>IT</i>";
+document.getElementById("job-title").style.color = "green";
+
+document.getElementById("job-title").addEventListener("click", function () {
+  document.getElementById("job-title").style.color = "green";
+});
