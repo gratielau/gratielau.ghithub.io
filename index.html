@@ -11,23 +11,51 @@
   <body>
     <header>
       <div id="header-wrapper">
-        <div><img src="pozaProfil.jpg" alt="poza" height="100" /></div>
-        <div>
+        <div style="height: 129px">
+          <img
+            src="pictures/pozaprofil.jpg"
+            alt="poza"
+            id="profil-picture"
+            height="100"
+          />
+        </div>
+        <div style="text-align: center">
           <h1>Gratiela Uivari</h1>
           <h2 id="job-title">Programator</h2>
         </div>
       </div>
       <ul id="top-menu-bar">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#" onclick="showSkills()">Skills</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Languages</a></li>
+        <li>
+          <b><a href="#" id="a-home" onclick="changePage('home');">HOME</a></b>
+        </li>
+        <li>
+          <b
+            ><a href="#" id="a-skills" onclick="changePage('skills');"
+              >Skills</a
+            ></b
+          >
+        </li>
+        <li>
+          <b
+            ><a href="#" id="a-projects" onclick="changePage('projects');"
+              >Projects</a
+            ></b
+          >
+        </li>
+        <li>
+          <b
+            ><a href="#" id="a-languages" onclick="changePage('languages');"
+              >Languages</a
+            ></b
+          >
+        </li>
       </ul>
     </header>
     <section id="content">
       <div id="side-menu">
         <section>
           <form action="" method="post">
+            <h3>Contact Form</h3>
             <label for="userEmail">Email:</label>
             <input
               type="email"
@@ -36,7 +64,22 @@
               placeholder="example.@me.com"
               required
             />
-            <button type="submit">Send</button>
+            <label for="userName"> Name:</label>
+            <input
+              type="text"
+              id="userName"
+              name="Name"
+              placeholder="please enter your name"
+              required
+            />
+            <label>Message:</label>
+            <textarea rows="4"></textarea>
+            <div id="send-button-div">
+              <button type="submit" id="send-button">
+                <img src="pictures/send.png" width="16px" height="16px" />
+                <b>SEND</b>
+              </button>
+            </div>
           </form>
         </section>
         <section>M2</section>
@@ -48,7 +91,28 @@
         <div class="page" id="languages">Languages content...</div>
       </div>
     </section>
-    <footer><a href="">Linkedin</a></footer>
+    <footer>
+      <ul>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/gratiela-uivari-651336270/"
+            target="_blank"
+          >
+            <img height="30px" width="60px" src="pictures/linkedin.png" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/" target="_blank">
+            <img height="30px" src="pictures/youtube.png" />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/gratielau" target="_blank">
+            <img height="30px" src="pictures/github.png" />
+          </a>
+        </li>
+      </ul>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>
