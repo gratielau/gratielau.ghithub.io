@@ -1,35 +1,6 @@
-/*
-setPaginaActiva("home");
+var activePage = "skills";
 
-function changePage(activePage) {
-  setPaginaInactiva("home");
-  setPaginaInactiva("skills");
-  setPaginaInactiva("projects");
-  setPaginaInactiva("languages");
-  setPaginaActiva(activePage);
-}
-
-function setPaginaInactiva(page) {
-  document.getElementById(page).style.display = "none";
-  var el = document.getElementById("a-" + page);
-  el.style.backgroundColor = "#00897b";
-  el.style.color = "#fff";
-}
-
-function setPaginaActiva(page) {
-  document.getElementById(page).style.display = "block";
-  var el = document.getElementById("a-" + page);
-  el.style.color = "#00897b";
-  el.style.backgroundColor = "#fff";
-}
-*/
-
-//var 1 basic nu este indicata
-
-var activePage = "home";
-
-var homePage = document.getElementById(activePage);
-homePage.style.display = "block";
+show(activePage);
 
 function hide(id) {
   document.getElementById(id).style.display = "none";
@@ -64,3 +35,15 @@ document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
     showPage(id);
   }
 });
+
+function showSkills() {
+  var skills = ["HTML", "CSS", "JS"];
+  var container = document.querySelector("#skills ul");
+  console.info(container, skills);
+  skills.forEach(function (skill) {
+    // container.innerHTML += "<li>" + skill + "</li>";
+    container.innerHTML += `<li> ${skill}</li>`;
+  });
+}
+
+showSkills();
