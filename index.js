@@ -55,3 +55,11 @@ function showPage(id) {
   hideAllPages();
   show(id);
 }
+
+document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
+  //console.warn("click", e.target.matches("a")); //functia matches returneaza true sau false daca s-a dat click pe un obiect din selector(a in cazul nostru)
+  if (e.target.matches("a")) {
+    var id = e.target.dataset.page;
+    showPage(id);
+  }
+});
