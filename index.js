@@ -36,6 +36,8 @@ document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
   }
 });
 
+//var 1 simpla
+/*
 function showSkills() {
   //console.time("show");
   var skills = ["HTML", "CSS", "JS"];
@@ -46,8 +48,21 @@ function showSkills() {
   });
   //console.timeEnd("show");
   //console.time("display");
+
+  //variabilele care folosesc elemente de tip dom (din interfata/ care se vad) se declara doar in momentul in care le folosim deoarece papa timp si consuma memoria browserului
   var container = document.querySelector("#skills ul");
   container.innerHTML = skillsHtml;
 }
+*/
+//var 2 optimizata
+function showSkills() {
+  //console.time("show");
+  var skills = ["HTML", "CSS", "JS"];
+  var html = skills.map(function (skill) {
+    return `<li> ${skill}</li>`;
+  });
 
+  var container = document.querySelector("#skills ul");
+  container.innerHTML = html.join("");
+}
 showSkills();
