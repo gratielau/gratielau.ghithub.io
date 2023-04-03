@@ -21,7 +21,6 @@ function setPaginaActiva(page) {
   var el = document.getElementById("a-" + page);
   el.style.color = "#00897b";
   el.style.backgroundColor = "#fff";
-  document.getElementById(page);
 }
 */
 
@@ -41,10 +40,14 @@ function show(id) {
 }
 
 function hideAllPages() {
-  var pages = ["home", "skills", "projects", "languages"];
+  /*
+  document.querySelectorAll(".page"); //orice elem care are clasa page
+  document.querySelectorAll("#main .page"); // toate elem din interiorul elem cu id main
+  document.querySelectorAll("#main >.page"); // toate elem din interiorul elem cu id main doar din primul nivel
+  */
+  var pages = document.querySelectorAll("#main .page");
   pages.forEach(function (page) {
-    console.info("hide", page);
-    hide(page);
+    hide(page.id);
   });
 }
 
