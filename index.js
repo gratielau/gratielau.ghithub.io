@@ -1,3 +1,4 @@
+/*
 setPaginaActiva("home");
 
 function changePage(activePage) {
@@ -21,4 +22,32 @@ function setPaginaActiva(page) {
   el.style.color = "#00897b";
   el.style.backgroundColor = "#fff";
   document.getElementById(page);
+}
+*/
+
+//var 1 basic nu este indicata
+
+var activePage = "home";
+
+var homePage = document.getElementById(activePage);
+homePage.style.display = "blok";
+
+function hide(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+function show(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function hideAllPages() {
+  hide("home");
+  hide("skills");
+  hide("projects");
+  hide("languages");
+}
+
+function showPage(id) {
+  hideAllPages();
+  show(id);
 }
