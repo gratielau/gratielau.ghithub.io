@@ -37,13 +37,17 @@ document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
 });
 
 function showSkills() {
+  //console.time("show");
   var skills = ["HTML", "CSS", "JS"];
-  var container = document.querySelector("#skills ul");
-  console.info(container, skills);
+  var skillsHtml = "";
   skills.forEach(function (skill) {
     // container.innerHTML += "<li>" + skill + "</li>";
-    container.innerHTML += `<li> ${skill}</li>`;
+    skillsHtml += `<li> ${skill}</li>`;
   });
+  //console.timeEnd("show");
+  //console.time("display");
+  var container = document.querySelector("#skills ul");
+  container.innerHTML = skillsHtml;
 }
 
 showSkills();
