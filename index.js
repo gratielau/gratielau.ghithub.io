@@ -29,7 +29,7 @@ function setPaginaActiva(page) {
 var activePage = "home";
 
 var homePage = document.getElementById(activePage);
-homePage.style.display = "blok";
+homePage.style.display = "block";
 
 function hide(id) {
   document.getElementById(id).style.display = "none";
@@ -60,6 +60,7 @@ document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
   //console.warn("click", e.target.matches("a")); //functia matches returneaza true sau false daca s-a dat click pe un obiect din selector(a in cazul nostru)
   if (e.target.matches("a")) {
     var id = e.target.dataset.page;
+    //dataset functioneaza doar pt proprietati custom de tip data-denumireaTa, getatribute functioneaza pt orice denumire la proprietatea custom
     showPage(id);
   }
 });
