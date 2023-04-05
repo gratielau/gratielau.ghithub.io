@@ -1,6 +1,6 @@
 var activePage = "skills";
 
-show(activePage);
+showPage(activePage);
 
 function hide(id) {
   document.getElementById(id).style.display = "none";
@@ -19,12 +19,18 @@ function hideAllPages() {
   var pages = document.querySelectorAll("#main .page");
   pages.forEach(function (page) {
     hide(page.id);
+    var link = document.querySelector(
+      `#top-menu-bar a[data-page = "${activePage}"]`
+    );
+    link.classList.remove("active");
   });
 }
 
 function showPage(id) {
   hideAllPages();
   show(id);
+  var link = document.querySelector(`#top-menu-bar a[data-page = "${id}"]`);
+  link.classList.add("active");
 }
 
 document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
@@ -33,6 +39,7 @@ document.querySelector("#top-menu-bar").addEventListener("click", function (e) {
     var id = e.target.dataset.page;
     //dataset functioneaza doar pt proprietati custom de tip data-denumireaTa, getatribute functioneaza pt orice denumire la proprietatea custom
     showPage(id);
+    activePage = id;
   }
 });
 
