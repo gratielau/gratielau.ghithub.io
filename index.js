@@ -66,22 +66,8 @@ function showSkills() {
 //   container.innerHTML = html.join("");
 // }
 
-function showSkills() {
+function showSkills(skills) {
   //console.time("show");
-  var skills = [
-    {
-      name: "HTML",
-      endorcements: 5,
-    },
-    {
-      name: "CSS",
-      endorcements: 10,
-    },
-    {
-      name: "JS",
-      endorcements: 15,
-    },
-  ];
   var html = skills.map(function (skill) {
     return `<li> ${skill.name} - <span class="endorcements">${skill.endorcements}</span></li>`;
   });
@@ -89,4 +75,31 @@ function showSkills() {
   var container = document.querySelector("#skills ul");
   container.innerHTML = html.join("");
 }
-showSkills();
+
+// fetch("skills.json").then(function (r) {
+//   r.json().then(function (r2) {
+//     console.warn("r2", r2);
+//   });
+// });
+
+//raspunsuri inlantuite
+// fetch("skills.json")
+//   .then(function (r) {
+//     return r.json();
+//   })
+//   .then(function (r2) {
+//     console.warn("r2", r2);
+//     return "te rog";
+//   })
+//   .then(function (p) {
+//     console.info(p);
+//   });
+
+fetch("skills.json")
+  .then(function (r) {
+    return r.json();
+  })
+  .then(function (skills) {
+    console.warn("skills", skills);
+    showSkills(skills);
+  });
