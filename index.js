@@ -95,11 +95,15 @@ function showSkills(skills) {
 //     console.info(p);
 //   });
 
-fetch("skills.json")
-  .then(function (r) {
-    return r.json();
-  })
-  .then(function (skills) {
-    console.warn("skills", skills);
-    showSkills(skills);
-  });
+function loadSkills() {
+  fetch("skills.json")
+    .then(function (r) {
+      return r.json();
+    })
+    .then(function (skills) {
+      console.warn("skills", skills);
+      showSkills(skills);
+    });
+}
+
+loadSkills();
