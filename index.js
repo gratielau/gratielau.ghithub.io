@@ -67,7 +67,14 @@ function showSkills() {
 // }
 
 function showSkills(skills) {
-  //console.time("show");
+  console.time("show");
+  skills.sort(function (a, b) {
+    return b.endorcements - a.endorcements; //a-b crescator, b-a descrescator  --pt numere
+  });
+
+  // skills.sort(function (a, b) { //sortare pt stringuri
+  //   return a.name.localeCompare(b.name);
+  // });
   var html = skills.map(function (skill) {
     return `<li> ${skill.name} - <span class="endorcements">${skill.endorcements}</span></li>`;
   });
@@ -82,7 +89,7 @@ function showSkills(skills) {
 //   });
 // });
 
-//raspunsuri inlantuite
+//raspunsuri inlantuite este mai ok asa
 // fetch("skills.json")
 //   .then(function (r) {
 //     return r.json();
