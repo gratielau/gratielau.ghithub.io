@@ -176,3 +176,11 @@ footer img {
 .endorcements {
   color: gray;
 }
+
+li.important {
+  font-weight: bold;
+}
+
+li.important .endorcements {
+  color: green;
+}

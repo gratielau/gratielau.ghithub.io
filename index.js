@@ -76,7 +76,8 @@ function showSkills(skills) {
   //   return a.name.localeCompare(b.name);
   // });
   var html = skills.map(function (skill) {
-    return `<li> ${skill.name} - <span class="endorcements">${skill.endorcements}</span></li>`;
+    var cls = skill.endorcements > 4 ? "class = 'important'" : "";
+    return `<li ${cls} > ${skill.name} - <span class="endorcements">${skill.endorcements}</span></li>`;
   });
 
   var container = document.querySelector("#skills ul");
