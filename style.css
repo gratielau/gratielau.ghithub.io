@@ -185,3 +185,38 @@ li.important {
 li.important .endorcements {
   color: green;
 }
+
+/* game css */
+.grid {
+  width: 456px;
+  height: 456px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  height: 150px;
+  width: 150px;
+  border: solid #00897b 1px;
+  background-color: white;
+}
+
+.jerry {
+  background-image: url("pictures/jerry.png");
+  background-size: cover;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+}
+
+#btnStart {
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #00897b;
+  color: #e8f5e9;
+}
+
+/* game css */

@@ -78,7 +78,46 @@
           <h2>Skills & Endorcements</h2>
           <ul></ul>
         </div>
-        <div class="page" id="projects">Projects content...</div>
+        <div class="page" id="projects">
+          <div class="container">
+            <table style="text-align: center">
+              <tr>
+                <td>
+                  <h2>Your score:</h2>
+                </td>
+                <td></td>
+                <td>
+                  <h2>Time Left:</h2>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h2 id="score">0</h2>
+                </td>
+                <td style="width: 200px">
+                  <button type="button" id="btnStart" onclick="Start()">
+                    Start
+                  </button>
+                </td>
+                <td>
+                  <h2 id="time-left">30</h2>
+                </td>
+              </tr>
+            </table>
+
+            <div class="grid">
+              <div class="square" id="1"></div>
+              <div class="square" id="2"></div>
+              <div class="square" id="3"></div>
+              <div class="square" id="4"></div>
+              <div class="square" id="5"></div>
+              <div class="square" id="6"></div>
+              <div class="square" id="7"></div>
+              <div class="square" id="8"></div>
+              <div class="square" id="9"></div>
+            </div>
+          </div>
+        </div>
         <div class="page" id="languages">Languages content...</div>
       </div>
     </section>
@@ -105,5 +144,6 @@
       </ul>
     </footer>
     <script src="index.js"></script>
+    <script src="Game.js"></script>
   </body>
 </html>
